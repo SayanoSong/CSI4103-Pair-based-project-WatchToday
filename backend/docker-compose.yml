@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  # Ideally, we dont want our passwords to be in the repo, but its fine for the project.
+    database:    
+        image: postgres:11-alpine
+        restart: always
+        expose:
+          - 5432
+        ports:
+          - 5432:5432
+        environment:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: movie
+        command: -p 5432
+  
+    adminer:
+          image: adminer
+          restart: always
+          ports:
+            - 8080:8080
+          environment:
+            ADMINER_DEFAULT_SERVER: database
+            ADMINER_DESIGN: nette

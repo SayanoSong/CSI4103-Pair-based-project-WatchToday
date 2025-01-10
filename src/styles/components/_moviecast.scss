@@ -1,0 +1,66 @@
+.cast-card {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+    margin: -0.8rem;
+    // mgin-bottom: 0.5rem;ar
+    font-size: 25px;
+    bottom:325%;
+    position: absolute;
+}
+
+// .slick-prev:before{
+//     padding-right: 3rem;
+// }
+
+// .slick-next:before {
+//     padding-left: 1rem;
+// }
+
+.actor-name {
+    text-align: center;
+}
+
+@media screen and (max-width: 650px)
+{
+    .actor-name{
+        font-size: 1rem;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        bottom: 200%;
+    }
+}
+
+@media screen and (min-width: 1920px)
+{
+    // Doesn't look great on ultrawide!
+    .actor-name{
+        font-size: 1rem;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        bottom: 200%;
+    }
+}
+
+
+@media screen and (max-width: 400px)
+{
+    .actor-name{
+        font-size: 0.75rem;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 20px;
+        bottom: 200%;
+    }
+}

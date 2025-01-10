@@ -1,0 +1,66 @@
+.navbar {
+    background: #035b7a;
+    display: flex;
+    margin-bottom: 2%;
+    flex-grow: 1;
+  
+    .container {
+      max-width: 80vw;
+      margin: 0 auto;
+  
+      // Add styles for the .logo-link class
+      .logo-link {
+        margin-right: 3%;
+      }
+    }
+  
+    .nav-link {
+      color: #f2f3f4;
+    }
+  
+    .tabOption {
+      margin-right: 3%;
+    }
+  
+    .navbar-nav {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1;
+    }
+  
+    .nav-watch {
+      display: flex;
+      justify-content: flex-start;
+      flex: 1;
+    }
+  
+    #changePwdLink,
+    #logOutLink,
+    #loginLink {
+      // display: none;
+    }
+  
+    @media only screen and (max-width: 600px) {
+      .navbar-nav {
+        flex-direction: column;
+        text-align: end;
+      }
+  
+      .nav-watch {
+        justify-content: flex-end;
+      }
+    }
+  }
+  
+  .navcontainer {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    flex-direction: row;
+  }
+  
+  @media only screen and (max-width: 275px) {
+    .navcontainer {
+      flex-direction: column;
+    }
+  }

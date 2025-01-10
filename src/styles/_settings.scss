@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Roboto";
+  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+}
+
+$font: "Roboto", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+body {
+  background: #f2f3f4;
+  color: #035b7a;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,31 @@
+.form-component {
+  .form-container {
+    text-align: center;
+    display: flex;
+  }
+  form {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-basis: 3/4;
+    input[type="text"] {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 1px 10px;
+      border-radius: 5px;
+      border-width: 1px;
+      font-size: 1.5rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+  .btn-sort-container {
+    margin: 8px auto;
+    width: 220px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+}

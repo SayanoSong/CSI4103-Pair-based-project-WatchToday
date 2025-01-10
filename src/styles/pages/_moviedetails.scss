@@ -1,0 +1,197 @@
+// Define the main color scheme
+$primary-color: #035b7a;
+$secondary-color: #535353;
+
+// Update the root element to use the new color scheme
+:root {
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+
+}
+
+.moviedetails {
+  // Use flexbox to center the movie details horizontally and vertically
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 10%;
+  // Style the movie poster
+  #poster {
+    max-width: 100%;
+  }
+
+  //Style the button
+  .detailBtn{
+    margin-bottom: 2%;
+    font-weight:bold;
+    width: 120px;
+    height: 5%;
+    background-color:#212529;
+    color: #E1DAD9;
+    border-color: #212529;
+  }
+  .detailBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  #btn2{
+    margin-left: 8px;
+    width: 300px
+  }
+  // Surely this is a bad way of doing this!
+
+  @media only screen and (max-width: 350px) {
+    .detailBtn{
+      display: flex;
+      flex-grow: 0.2;
+    }
+  }
+
+  @media only screen and (min-width: 350px)  and (max-width: 775px) {
+    .detailBtn{
+      display: flex;
+      flex-grow: 0.025;
+    }
+  }
+
+  @media only screen and (min-width: 350px)  and (max-width: 600px) {
+    .detailBtn{
+      display: flex;
+      flex-grow: 0.1;
+      text-align: center;
+    }
+  }
+
+  .button-container {
+    display:flex;
+  }
+
+  // Style the movie details section
+  .table {
+    // Use flexbox to center the title and genre horizontally
+    display: flex;
+    flex-direction: column;
+
+    // Style the title
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      text-align: left;
+      color: $primary-color;
+      margin-top: 0%;
+      margin-bottom: 2.5rem;
+    }
+
+    // Style the genre
+    .genreTitle {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-align: left;
+      color: $secondary-color;
+      .genre-container {
+        display: flex;
+        justify-content: left;
+      }
+
+      @media only screen and (max-width: 450px) {
+        .genre-container {
+          flex-direction: column;
+        }
+      }
+
+      .genre {
+        margin: 0 0.5rem;
+        padding: 0 0.5rem;
+        font-size: 1.4rem;
+        text-align: center;
+        color: $secondary-color;
+        border: 1px solid $primary-color;
+        border-radius: 4px;
+      }
+    }
+
+    .language{
+      .language_container{
+        display: flex;
+        justify-content: left;
+      }
+    }
+
+    // Style the movie details
+    .p {
+      font-size: 1.3rem;
+      text-align: left;
+      color: blue;
+      margin-bottom: 3%;
+    }
+
+    #btnContainer{
+      padding: 8px;
+      margin-left: 0%;
+    }
+    .poster-container {
+      position: relative;
+    
+      .watch-trailer-btn {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.7);
+        color: black;
+        border: none;
+        padding: 20px;
+        transition: all 0.1s ease-in-out;
+        
+        &:after {
+          content: " \25B6";
+          font-size: 16px;
+        }
+        
+        &:hover {
+          transform: scale(1);
+          background-color: rgba(255, 255, 255, 0.9);
+          font-size: 18px;
+        }
+      }
+      .watchlist-btn {
+        position: absolute;
+        bottom: -55px;
+        left: 0;
+        width: 100%;
+        background-color: #212529;
+        color: #e1dad9;
+        border-color: #212529;
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.table-container{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  width: 100%;
+}
+
+@media only screen and (max-width: 675px) {
+  .table-container{
+    flex-direction: column;
+  }
+}
+
+.movie-poster {
+  // object-fit: fill;
+  min-width: 100%;
+}
+
+@media only screen and (max-width: 350px) {
+  .movie-poster{
+      width: 50%;
+  }
+}

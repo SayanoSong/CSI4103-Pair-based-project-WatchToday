@@ -1,0 +1,39 @@
+h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 3%;
+
+}
+.platformTable{
+    display:flex;
+    justify-content:center;
+    margin-bottom: 5%;
+    .ImgContainer{
+        width: 50%;
+        .platformImg{
+            margin-left: 20%;
+            max-width: 60%;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 500px)
+{
+    .platformTable{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // this doesn't really work because the images used aren't fully square!
+    }
+    .platform-header{
+        text-align:center;
+    }
+}
+
+h3{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
